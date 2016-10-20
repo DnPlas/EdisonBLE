@@ -24,7 +24,9 @@ class Reader(object):
         print("OK!")
 
     def send_data(self):
-        self.requester.write_by_handle(0xb, str(bytearray([1]))) #You can find the bluetoth handle using the method requester.discover_characteristics(), in this case, my Arduino's is 0xb
+        self.requester.write_by_handle(0xb, str(bytearray([1]))) # You can find the bluetooth handle using
+                                                                 # requester.discover_characteristics()
+                                                                 # In this case, my Arduino's handle is 0xb
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
